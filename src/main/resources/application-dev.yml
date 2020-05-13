@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: greeting-service
+  cloud:
+    consul:
+        host: localhost
+        port: 8500
+        discovery:
+           instanceId: ${spring.application.name}:${random.value}
+           healthCheckInterval: 20s
+greeting: hello!!! app is running in dev env and wish you a good day
