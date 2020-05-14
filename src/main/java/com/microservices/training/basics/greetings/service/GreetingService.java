@@ -4,5 +4,5 @@ import com.microservices.training.basics.greetings.model.GreetingDTO;
 
 public interface GreetingService {
 	
-	GreetingDTO sendGreeting();
+	GreetingDTO sendGreeting() throws Exception;
 }

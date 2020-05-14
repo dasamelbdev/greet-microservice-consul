@@ -18,7 +18,7 @@ public class GreetingController {
 	private GreetingService greetingService;
 
 	@GetMapping("/greet")
-	public ResponseEntity<GreetingDTO> sendGreeting() {
+	public ResponseEntity<GreetingDTO> sendGreeting() throws Exception {
 
 		GreetingDTO greeting = greetingService.sendGreeting();
 		if (greeting == null) {
