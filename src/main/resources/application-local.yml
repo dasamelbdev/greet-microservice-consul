@@ -7,5 +7,5 @@ spring:
         port: 8500
         discovery:
            instanceId: ${spring.application.name}:${random.value}
-           healthCheckInterval: 20s
+           healthCheckInterval: 5s
 greeting: hello!!! app is running in local env and wish you a good day
