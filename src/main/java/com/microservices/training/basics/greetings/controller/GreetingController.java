@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microservices.training.basics.greetings.model.GreetingDTO;
+import com.microservices.training.basics.greetings.model.FinalResponse;
 import com.microservices.training.basics.greetings.service.GreetingService;
 
 @RestController
@@ -26,7 +26,7 @@ public class GreetingController {
 	private GreetingService greetingService;
 
 	@GetMapping("/greet")
-	public ResponseEntity<GreetingDTO> sendGreeting() throws Exception {
+	public ResponseEntity<FinalResponse> sendGreeting() throws Exception {
 
 		/*
 		 * command line args will be added to the spring Environment bean. Also we can
@@ -37,11 +37,11 @@ public class GreetingController {
 		logger.info(env.getProperty("spring.application.name") + " service instance with port :"
 				+ env.getProperty("server.port") + " called");
 
-		GreetingDTO greeting = greetingService.sendGreeting();
-		if (greeting == null) {
+		FinalResponse finalResponse = greetingService.sendGreeting();
+		if (finalResponse == null) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		} else
-			return new ResponseEntity<GreetingDTO>(greeting, HttpStatus.OK);
+			return new ResponseEntity<FinalResponse>(finalResponse, HttpStatus.OK);
 
 	}
 
