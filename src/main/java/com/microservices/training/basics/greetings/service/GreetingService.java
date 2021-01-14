@@ -1,8 +1,8 @@
 package com.microservices.training.basics.greetings.service;
 
-import com.microservices.training.basics.greetings.model.GreetingDTO;
+import com.microservices.training.basics.greetings.model.FinalResponse;
 
 public interface GreetingService {
 	
-	GreetingDTO sendGreeting() throws Exception;
+	FinalResponse sendGreeting() throws Exception;
 }
