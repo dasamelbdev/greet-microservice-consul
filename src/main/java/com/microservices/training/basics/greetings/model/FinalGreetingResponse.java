@@ -1,6 +1,6 @@
 package com.microservices.training.basics.greetings.model;
 
-public class FinalResponse {
+public class FinalGreetingResponse {
 	
 	private GreetingDTO greetingDTO;
 	private ExternalServicceConfigData externalServicceConfigData;
